@@ -1,0 +1,280 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: powershell.exe
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: E:\Projetos\Prometheus\sysmetrics
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 176
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 41
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 100
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    title: Terminalizer
+    style:
+      border: 0px black solid
+      # boxShadow: none
+      # margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 12
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 5894
+    content: "\e[?9001h\e[?1004h"
+  - delay: 61
+    content: "\e[?25l\e[2J\e[m\e[HO Windows PowerShell\r\nCopyright (C) Microsoft Corporation. Todos os direitos reservados.\e[4;1HInstale o PowerShell mais recente para obter novos recursos e aprimoramentos! https://aka.ms/PSWindows\e]0;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\a\e[?25h"
+  - delay: 21
+    content: "\e[?25l\e[6;1H\e[?25h"
+  - delay: 181
+    content: 'PS E:\Projetos\Prometheus\sysmetrics> '
+  - delay: 1978
+    content: "\e[?25l"
+  - delay: 16
+    content: "\e[93mn\e[?25h"
+  - delay: 198
+    content: "\e[m\e[?25l"
+  - delay: 17
+    content: "\e[93m\bnp\e[?25h"
+  - delay: 92
+    content: "\e[m\e[?25l"
+  - delay: 17
+    content: "\e[93m\e[6;39Hnpm\e[?25h"
+  - delay: 157
+    content: "\e[m\e[?25l"
+  - delay: 14
+    content: "\e[93m\e[6;39Hnpm \e[?25h"
+  - delay: 93
+    content: "\e[m\e[?25l"
+  - delay: 15
+    content: "\e[93m\e[6;39Hnpm \e[37mr\e[?25h"
+  - delay: 118
+    content: "\e[m\e[?25l"
+  - delay: 20
+    content: "\e[93m\e[6;39Hnpm \e[37mru\e[?25h"
+  - delay: 29
+    content: "\e[m\e[?25l"
+  - delay: 17
+    content: "\e[93m\e[6;39Hnpm \e[37mrun\e[?25h"
+  - delay: 223
+    content: "\e[m\e[?25l"
+  - delay: 9
+    content: "\e[93m\e[6;39Hnpm \e[37mrun \e[?25h"
+  - delay: 52
+    content: "\e[m\e[?25l"
+  - delay: 9
+    content: "\e[93m\e[6;39Hnpm \e[37mrun s\e[?25h"
+  - delay: 121
+    content: "\e[m\e[?25l"
+  - delay: 19
+    content: "\e[93m\e[6;39Hnpm \e[37mrun st\e[?25h"
+  - delay: 94
+    content: "\e[m\e[?25l"
+  - delay: 14
+    content: "\e[93m\e[6;39Hnpm \e[37mrun sta\e[?25h"
+  - delay: 83
+    content: "\e[m\e[?25l"
+  - delay: 10
+    content: "\e[93m\e[6;39Hnpm \e[37mrun star\e[?25h"
+  - delay: 186
+    content: "\e[m\e[?25l"
+  - delay: 13
+    content: "\e[93m\e[6;39Hnpm \e[37mrun start\e[?25h"
+  - delay: 96
+    content: "\e[m"
+  - delay: 12
+    content: "\r\n"
+  - delay: 147
+    content: "\e]0;npm\a"
+  - delay: 87
+    content: "\e]0;npm run start\a"
+  - delay: 32
+    content: "\e[?25l\r\n> sysmetrics@1.0.0 start\r\n> node --import ./register.js src/test.ts\e[11;1H\e[?25h"
+  - delay: 13
+    content: "\e[K"
+  - delay: 6545
+    content: "\r\nSystem Information:\r\n"
+  - delay: 13
+    content: "\e[?25l  - CPU Info: AMD Ryzen 5 5600X 6-Core Processor\r\n  - Motherboard: B550M AORUS ELITE\r\n  - GPU: NVIDIA GeForce RTX 4060\e[17;1HCPU Information:\r\n  - Used Percentage: 2%\e[20;1HGPU Information:\r\n\e[?25h"
+  - delay: 147
+    content: "  - VRAM Total: 8188 MB\r\n"
+  - delay: 138
+    content: "  - VRAM Used: 2431 MB\r\n"
+  - delay: 139
+    content: "  - Memory Percentage: 6 %\r\n"
+  - delay: 140
+    content: "  - Temperature: 56 °C\r\n"
+  - delay: 22
+    content: "\r\nRAM Information:\r\n  - Memory Total: 16288 MB\r\n  - Memory Free: 4009 MB\r\n  - Memory Used: 12279 MB\r\n"
+  - delay: 5878
+    content: "\r\n--- Top 5 Processes by CPU ---\r\n"
+  - delay: 16
+    content: "Name                           PID        CPU        Memory (MB)\r\nGCloud                         15392      0.42       10\r\nWmiPrvSE                       7344       0.42       141\r\nAdjustService                  3888       0.00       6\r\nAggregatorHost                 8004       0.00       6\r\nAnalyticsSrv                   28036      0.00       2\r\n"
+  - delay: 480
+    content: "\r\n--- Top 5 Processes by Memory ---\r\nName                           PID        CPU        Memory (MB)\r\nchrome                         9536       0.00       4055\r\nMemory Compression             2764       0.00       1573\r\nmsedgewebview2                 37632      0.00       1193\r\nCode                           12260      0.00       978\r\nsvchost                        1372       0.00       702\r"
+  - delay: 16
+    content: |+
+
+  - delay: 16
+    content: "\e[K\e]0;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\a"
+  - delay: 23
+    content: 'PS E:\Projetos\Prometheus\sysmetrics> '
+  - delay: 3666
+    content: "\e[?25l"
+  - delay: 17
+    content: "\e[93m^D\e[?25h"
+  - delay: 975
+    content: "\e[m\e[?25l"
+  - delay: 14
+    content: "\e[93m\e[41;39H^D^D\e[?25h"
+  - delay: 395
+    content: "\e[m\e[?25l\e[93m\e[41;39H^D^D\e[91m^C\r\e[?25h"
+  - delay: 9
+    content: "\e[m\nPS E:\\Projetos\\Prometheus\\sysmetrics>\e[1C"
+  - delay: 699
+    content: "\e[?25l\e[91m^C\r\e[?25h"
+  - delay: 12
+    content: "\e[m\nPS E:\\Projetos\\Prometheus\\sysmetrics>\e[1C"
+  - delay: 5645
+    content: "\e[?25l"
+  - delay: 18
+    content: "\e[93m^D\e[?25h"
+  - delay: 7471
+    content: "\e[m\e[?25l"
+  - delay: 23
+    content: "\e[93m\e[41;39H^D^D\e[?25h"
+  - delay: 924
+    content: "\e[m\e[?25l"
+  - delay: 22
+    content: "\e[93m\e[41;39H^D^D^D\e[?25h"
+  - delay: 277
+    content: "\e[m\e[?25l"
+  - delay: 18
+    content: "\e[93m\e[41;39H^D^D^D^D\e[?25h"
+  - delay: 289
+    content: "\e[m\e[?25l"
+  - delay: 22
+    content: "\e[93m\e[41;39H^D^D^D^D^D\e[?25h"
+  - delay: 1858
+    content: "\e[m\e[?25l"
+  - delay: 14
+    content: "\e[93m\e[41;39H^D^D^D^D^De\e[?25h"
+  - delay: 573
+    content: "\e[m\e[?25l"
+  - delay: 14
+    content: "\e[41;39H\e[11X\e[?25h"
+  - delay: 469
+    content: "\e[?25l\e[91m^C\r\e[?25h"
+  - delay: 11
+    content: "\e[m\nPS E:\\Projetos\\Prometheus\\sysmetrics>\e[1C"
+  - delay: 651
+    content: "\e[?25l"
+  - delay: 16
+    content: "\e[93me\e[?25h"
+  - delay: 186
+    content: "\e[m\e[?25l"
+  - delay: 14
+    content: "\e[93m\bex\e[?25h"
+  - delay: 93
+    content: "\e[m\e[?25l"
+  - delay: 16
+    content: "\e[93m\e[41;39Hexi\e[?25h"
+  - delay: 133
+    content: "\e[m\e[?25l"
+  - delay: 8
+    content: "\e[92m\e[41;39Hexit\e[?25h"
+  - delay: 117
+    content: "\e[m"
+  - delay: 22
+    content: "\r\n"
