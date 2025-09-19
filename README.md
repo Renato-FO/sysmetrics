@@ -6,13 +6,13 @@
 
 <p align="center">
   <a href="https://www.npmjs.com/package/sysmetrics">
-    <img src="https://img.shields.io/npm/v/sysmetrics.svg?style=for-the-badge" alt="NPM Version">
+    <img src="https://img.shields.io/npm/v/sysmetrics.svg?style=for-the-badge/$v1" alt="NPM Version">
   </a>
-  <a href="https://github.com/Renato-FO/sysmetrics/actions">
+  <!-- <a href="https://github.com/Renato-FO/sysmetrics/actions">
     <img src="https://img.shields.io/github/actions/workflow/status/Renato-FO/sysmetrics/main.yml?style=for-the-badge" alt="Build Status">
-  </a>
+  </a> -->
   <a href="https://opensource.org/licenses/MIT">
-    <img src="https://img.shields.io/npm/l/sysmetrics?style=for-the-badge" alt="License: MIT">
+    <img src="https://img.shields.io/npm/l/sysmetrics?style=for-the-badge/$v1" alt="License: MIT">
   </a>
 </p>
 

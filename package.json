@@ -1,20 +1,42 @@
 {
   "name": "sysmetrics",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --import ./register.js src/test.ts",
-    "build": "tsc"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "description": "A zero-dependency TypeScript library for fetching real-time hardware metrics and system information in Node.js.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "node --import ./register.js src/test.ts",
+    "build": "rimraf dist && tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Renato F. Ordonho renatoordonho@gmail.com",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Renato-FO/sysmetrics.git"
+  },
+  "keywords": [
+    "typescript",
+    "nodejs",
+    "system-monitoring",
+    "hardware",
+    "metrics",
+    "cli",
+    "cross-platform",
+    "zero-dependency",
+    "wmic",
+    "nvidia-smi",
+    "system-information",
+    "system"
+  ],
   "devDependencies": {
-    "@types/node": "^24.5.0",
+    "@types/node": "^20.14.2",
+    "rimraf": "^5.0.10",
     "ts-node": "^10.9.2",
-    "typescript": "^5.9.2"
+    "typescript": "^5.4.5"
   }
 }
