@@ -1,58 +1,66 @@
+# 📊 sysmetrics
+
 <p align="center">
-  <br />
-  <h1>📊 sysmetrics</h1>
-  Uma biblioteca moderna e multiplataforma para monitoramento de métricas de sistema e informações de hardware, escrita em TypeScript para Node.js.
+  A modern, cross-platform library for monitoring system metrics and hardware information, written in TypeScript for Node.js.
 </p>
 
-[](https://www.google.com/search?q=https://www.npmjs.com/package/sysmetrics)
-[](https://www.google.com/search?q=https://github.com/seu-usuario/sysmetrics/actions)
-[](https://opensource.org/licenses/MIT)
+<p align="center">
+  <a href="https://www.npmjs.com/package/sysmetrics">
+    <img src="https://img.shields.io/npm/v/sysmetrics.svg?style=for-the-badge" alt="NPM Version">
+  </a>
+  <a href="https://github.com/Renato-FO/sysmetrics/actions">
+    <img src="https://img.shields.io/github/actions/workflow/status/Renato-FO/sysmetrics/main.yml?style=for-the-badge" alt="Build Status">
+  </a>
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/npm/l/sysmetrics?style=for-the-badge" alt="License: MIT">
+  </a>
+</p>
 
 ---
 
-## 🚀 Demonstração
+## 🚀 Demonstration
 
 <p align="center">
   <img src="./src/assets/example.gif" alt="Demonstration of sysmetrics" width="700">
 </p>
 
-## ✨ Sobre a Biblioteca
+## ✨ About The Library
 
-`sysmetrics` é uma biblioteca leve e sem dependências para monitorar a performance do sistema e obter informações de hardware em tempo real. Ela abstrai os complexos comandos específicos de cada sistema operacional, fornecendo uma API limpa, assíncrona e fácil de usar.
+`sysmetrics` is a lightweight, zero-dependency library for monitoring system performance and retrieving real-time hardware information. It abstracts away complex, OS-specific commands, providing a clean, asynchronous, and easy-to-use API.
 
-Foi projetada para ser a espinha dorsal de dashboards de monitoramento, modelos preditivos de IA e qualquer aplicação que precise entender o ambiente de hardware em que está operando.
+It is designed to be the data collection backbone for monitoring dashboards, predictive AI models, and any application that needs to understand its underlying hardware environment.
 
 ---
 
-## 📦 Instalação
+## 📦 Installation
 
 ```bash
 npm install sysmetrics
 ```
 
-_(Nota: Pacote ainda não publicado)_
+_(Note: Package not yet published)_
 
 ---
 
-## ⚡ Guia Rápido
+## ⚡ Quick Start
 
-Começar a usar a `sysmetrics` é simples. Importe o objeto principal e chame os métodos que precisar.
+Getting started with `sysmetrics` is simple. Import the main object and call the methods you need.
 
 ```typescript
 import { sysmetrics } from "sysmetrics";
 
 async function logSystemSnapshot() {
   try {
-    // 1. Obter informações estáticas do hardware
+    // 1. Get static hardware info
     const system = await sysmetrics.getSystemInfo();
     console.log(`System: ${system.cpu} on ${system.motherboard}`);
 
-    // 2. Obter métricas dinâmicas
+    // 2. Get dynamic metrics
     const cpuUsage = await sysmetrics.getCpuUsage();
     const ram = await sysmetrics.getMemoryUsage();
 
-    // 3. Obter métricas da GPU
-    // A função getGpuInfo() retorna um objeto com métodos específicos
+    // 3. Get GPU metrics
+    // The getGpuInfo() function returns an object with specific methods
     const gpuController = sysmetrics.getGpuInfo();
     const gpuStats = await gpuController.getCurrentGpuStats();
 
@@ -62,7 +70,7 @@ async function logSystemSnapshot() {
       `  - Temp: ${gpuStats.temperature}°C, VRAM Used: ${gpuStats.vramUsed}MB`
     );
 
-    // 4. Obter os processos que mais consomem memória
+    // 4. Get top memory-consuming processes
     const topProcesses = await sysmetrics.getTopProcesses({ sortBy: "memory" });
     console.log("\nTop Memory Processes:", topProcesses);
   } catch (error) {
@@ -75,52 +83,38 @@ logSystemSnapshot();
 
 ---
 
-## 📋 Funcionalidades
+## 📋 Features
 
-- **✅ Informações do Sistema:** Obtenha dados estáticos sobre CPU, placa-mãe e GPU.
-- **✅ Monitoramento de CPU:** Acompanhe o uso percentual em tempo real.
-- **✅ Monitoramento de RAM:** Veja a memória total, usada e livre.
-- **✅ Monitoramento de GPU:**
-  - Detecção inteligente de fabricante (NVIDIA, AMD, Intel).
-  - Dados de temperatura, uso de VRAM e carga da GPU (quando disponível).
-- **✅ Análise de Processos:** Liste os processos que mais consomem recursos, agrupados por aplicação.
-- **💻 Suporte Multiplataforma:** Arquitetura pronta para Windows, Linux e macOS.
+- **✅ System Information:** Get static data about your CPU, Motherboard, and GPU.
+- **✅ CPU Monitoring:** Track real-time percentage usage.
+- **✅ RAM Monitoring:** View total, used, and free memory.
+- **✅ GPU Monitoring:**
+  - Smart vendor detection (NVIDIA, AMD, Intel, Apple).
+  - Provides temperature, VRAM usage, and GPU load data (where available).
+- **✅ Process Analysis:** List top resource-consuming processes, aggregated by application.
+- **✅ Full Cross-Platform Support:** Fully functional on Windows, Linux, and macOS.
 
-| Métrica                 | Windows | Linux | macOS |
-| :---------------------- | :-----: | :---: | :---: |
-| **Info Estática**       |   ✅    |  ⏳   |  ⏳   |
-| **CPU / RAM**           |   ✅    |  ⏳   |  ⏳   |
-| **Processos**           |   ✅    |  ⏳   |  ⏳   |
-| **GPU (NVIDIA)**        |   ✅    |  ✅   |  ❌   |
-| **GPU (AMD)**           |   ✅    |  ✅   |  ❌   |
-| **GPU (Intel / Apple)** |   ✅    |  ⏳   |  ✅   |
-
-_(✅ = Implementado, ⏳ = Em Desenvolvimento, ❌ = Não Aplicável)_
+| Metric          | Windows | Linux | macOS |
+| :-------------- | :-----: | :---: | :---: |
+| **Static Info** |   ✅    |  ✅   |  ✅   |
+| **CPU / RAM**   |   ✅    |  ✅   |  ✅   |
+| **Processes**   |   ✅    |  ✅   |  ✅   |
+| **GPU Metrics** |   ✅    |  ✅   |  ✅   |
 
 ---
 
-## 🛣️ Roadmap
+## 🤝 Contributing
 
-- [x] **Implementação Principal (Windows)**
-- [ ] **Suporte Completo para Linux & macOS**
-- [ ] **Suíte de Testes com Vitest/Jest**
-- [ ] **Documentação da API com TSDoc**
-- [ ] **Publicação da v1.0.0 no NPM**
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
----
-
-## 🤝 Contribuindo
-
-Contribuições são o que tornam a comunidade open source um lugar incrível para aprender, inspirar e criar. Qualquer contribuição que você fizer será **muito apreciada**.
-
-1.  Faça um Fork do Projeto
-2.  Crie sua Feature Branch (`git checkout -b feature/AmazingFeature`)
-3.  Faça o Commit de suas alterações (`git commit -m 'Add some AmazingFeature'`)
-4.  Faça o Push para a Branch (`git push origin feature/AmazingFeature`)
-5.  Abra um Pull Request
+1.  Fork the Project
+2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4.  Push to the Branch (`git push origin feature/AmazingFeature`)
+5.  Open a Pull Request
 
 ---
 
-## 📜 Licença
+## 📜 License
 
-Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
+Distributed under the MIT License. See `LICENSE` for more information.
